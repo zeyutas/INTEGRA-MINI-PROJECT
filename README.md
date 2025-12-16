@@ -1,30 +1,34 @@
 # Integra Mini Project Monorepo
 
-This repo will house the backend (Django REST) and the incoming frontend under a single workspace.
+Monorepo for the Django REST backend and Vue 2 frontend, managed with npm workspaces and Turborepo.
 
 ## Layout
-- `apps/user-profile-backend`: Django REST API for user profiles (see its README for details).
-- `apps/<frontend>`: placeholder for the frontend code once it is moved in.
-- `packages/`: shared libraries or configs (empty for now).
-  - `packages/shared-types`: shared TypeScript types for the API contracts (e.g., `UserProfile`, `UserProfileUpdatePayload`).
+- `apps/user-profile-backend`: Django REST API (see its README for setup).
+- `apps/user-profile-frontend`: Vue 2 + Element UI frontend.
+- `packages/shared-types`: Shared TypeScript contracts (not yet consumed in apps; keep for future wiring).
 
-## Local setup
-1) Clone and install tools
-   - Python 3.11+ with `venv`
-   - Node.js (for the future frontend and turborepo tooling)
+## Prereqs
+- Python 3.11+ with `venv`
+- Node.js (npm) for frontend and turbo tooling
 
-2) Backend quickstart  
-   `cd apps/user-profile-backend` and follow its `README.md` (`.env.example`, `pip install -r requirements*.txt`, `python manage.py migrate`, `python manage.py runserver`).
+## Install
+From repo root:
+```bash
+npm install
+```
+This installs turbo and workspace dependencies (frontend + shared types).
 
-3) Frontend (coming soon)  
-   When the frontend lands in `apps/<frontend>`, add its install/run scripts (e.g., `npm install`, `npm run dev`).
-
-## Turbo repo intent
-`turbo.json` is scaffolded for shared tasks (`lint`, `test`, `dev`) across apps. Add per-app commands in each package’s `package.json` and wire them to the pipeline when the frontend arrives.
+## Run
+- Backend: `cd apps/user-profile-backend` and follow its `README.md` (`cp .env.example .env`, pip install, migrate, `python manage.py runserver`).
+- Frontend dev: `npm run dev` (runs turbo -> `vue-cli-service serve` in `apps/user-profile-frontend`). You can scope: `npm run dev -- --filter user-profile-frontend`.
+- Lint frontend: `npm run lint`
+- Tests: placeholder only (no tests defined yet).
 
 ## Environment variables
-- Backend variables live in `apps/user-profile-backend/.env.example`.
-- Consider adding root-level `.env.example` entries that are shared by both apps (e.g., API base URLs) once the frontend is in place.
+- Backend: see `apps/user-profile-backend/.env.example`.
+- Frontend:
+  - `VUE_APP_API_BASE_URL` (prod/base URL, default `http://localhost:8000`)
+  - `VUE_APP_API_PROXY_TARGET` (dev proxy target, default `http://localhost:8000`)
 
 ## House rules
 - Keep secrets out of git (`.env`, database files, API keys).

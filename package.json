@@ -1,8 +1,9 @@
 {
   "name": "integra-mini-project",
   "private": true,
+  "packageManager": "npm@10.9.3",
   "workspaces": [
-    "apps/*",
+    "apps/user-profile-frontend",
     "packages/*"
   ],
   "scripts": {
