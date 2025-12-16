@@ -1,0 +1,37 @@
+# Node / frontend
+node_modules/
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+dist/
+build/
+.turbo/
+.next/
+coverage/
+
+# Python / backend
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Environment / secrets / data
+.env
+.env.local
+.env.*.local
+*.sqlite3
+*.sqlite3-journal
+db.sqlite3
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.code-workspace
+
+# Logs
+*.log
+logs/
