@@ -6,6 +6,7 @@ This repo will house the backend (Django REST) and the incoming frontend under a
 - `apps/user-profile-backend`: Django REST API for user profiles (see its README for details).
 - `apps/<frontend>`: placeholder for the frontend code once it is moved in.
 - `packages/`: shared libraries or configs (empty for now).
+  - `packages/shared-types`: shared TypeScript types for the API contracts (e.g., `UserProfile`, `UserProfileUpdatePayload`).
 
 ## Local setup
 1) Clone and install tools
