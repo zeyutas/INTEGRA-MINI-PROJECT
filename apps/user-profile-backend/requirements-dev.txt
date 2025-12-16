@@ -1,0 +1,7 @@
+factory_boy==3.3.0
+pytest==8.3.3
+pytest-django==4.9.0
+flake8==7.1.1
+drf-spectacular
+djangorestframework-simplejwt
+django-cors-headers
