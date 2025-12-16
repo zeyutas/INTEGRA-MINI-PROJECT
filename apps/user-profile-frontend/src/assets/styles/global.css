@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif;
+  background: #f5f7fb;
+  color: #1f2d3d;
+}
+
+a {
+  color: #409eff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+* {
+  box-sizing: border-box;
+}

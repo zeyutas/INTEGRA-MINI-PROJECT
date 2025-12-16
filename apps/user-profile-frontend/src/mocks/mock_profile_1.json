@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "username": "kelly_advisor",
+  "email": "kelly.li@smith-accounting.com.au",
+  "first_name": "Kelly",
+  "last_name": "Li",
+  "advisor_id": "ADV-882190",
+  "firm_name": "Smith & Co. Financial Services",
+  "role": "Senior SMSF Advisor",
+  "license_number": "AFSL-123456",
+  "managed_funds_count": 12,
+  "kyc_status": "VERIFIED",
+  "avatar_url": "https://ui-avatars.com/api/?name=Kelly+Li&background=0D8ABC&color=fff",
+  "last_login_ip": "203.15.10.1",
+  "last_login_at": "2025-12-10T17:30:00Z"
+}
